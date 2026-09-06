@@ -1,0 +1,244 @@
+# Upptime Configuration File
+# https://upptime.js.org/docs/configuration
+
+owner: roberto-mota20
+repo: status.rbto20.com
+user-agent: roberto-mota20
+
+sites:
+  - name: Domínio Principal
+    url: https://rbto20.com
+  - name: Redirecionamento
+    url: https://c.rbto20.com
+  - name: Projetos
+    url: https://toto.rbto20.com
+
+assignees:
+  - roberto-mota20
+
+status-website:
+  # Title and branding
+  name: Roberto Mota | Status
+  theme: dark
+  logoUrl: assets/pfp.jpg
+  introTitle: "**Status do Sistema**"
+  introMessage: "Monitoramento em tempo real de disponibilidade e tempo de resposta dos serviços."
+  navbar:
+    - title: Status
+      href: /
+    - title: Principal
+      href: https://rbto20.com
+    - title: GitHub
+      href: https://github.com/roberto-mota20
+
+  customHeadHtml: |
+    <link rel="icon" type="image/jpeg" href="assets/pfp.jpg" />
+    <style>
+      @font-face {
+        font-family: 'JetBrains Mono';
+        src: url('assets/JetBrainsMono-VariableFont_wght.ttf') format('truetype-variations'),
+             url('assets/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        --ds-teal-500: #009688;
+        --ds-teal-subtle: rgba(0, 150, 136, 0.1);
+        --ds-teal-border: rgba(0, 150, 136, 0.35);
+        --bg-color: #0b0e14;
+        --text-primary: #ededed;
+        --text-secondary: #9aa4b2;
+        --text-muted: #555e6d;
+        --border-color: #21262d;
+        --border-hover: #30363d;
+        --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      html, body {
+        background-color: var(--bg-color) !important;
+        color: var(--text-primary) !important;
+        font-family: var(--font-mono) !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        min-height: 100vh;
+      }
+      ::selection {
+        background-color: var(--ds-teal-500) !important;
+        color: #ffffff !important;
+      }
+      /* Header & Nav */
+      header, nav, .navbar, .nav-container {
+        background-color: var(--bg-color) !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        font-family: var(--font-mono) !important;
+      }
+      nav a, .navbar a, .nav-link {
+        color: var(--text-secondary) !important;
+        font-family: var(--font-mono) !important;
+        font-size: 0.85rem !important;
+        text-decoration: none !important;
+        transition: color 0.15s ease !important;
+      }
+      nav a:hover, .navbar a:hover, .nav-link:hover {
+        color: var(--ds-teal-500) !important;
+      }
+      h1, h2, h3, h4, h5, h6, .header-name {
+        font-family: var(--font-mono) !important;
+        color: var(--text-primary) !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.02em !important;
+      }
+      p, .lead {
+        color: var(--text-secondary) !important;
+        font-family: var(--font-mono) !important;
+        font-size: 0.85rem !important;
+        line-height: 1.6 !important;
+      }
+      /* Containers & Cards */
+      .container, main {
+        max-width: 820px !important;
+        padding: 2rem 1.25rem !important;
+        margin: 0 auto !important;
+      }
+      .card, section, .status-card, .fdb-block {
+        background: rgba(255, 255, 255, 0.012) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 6px !important;
+        color: var(--text-primary) !important;
+      }
+      /* Tables */
+      table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+        font-family: var(--font-mono) !important;
+        font-size: 0.82rem !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 6px !important;
+        overflow: hidden !important;
+        margin: 1rem 0 !important;
+      }
+      th {
+        background: rgba(255, 255, 255, 0.03) !important;
+        color: var(--text-primary) !important;
+        font-weight: 600 !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        padding: 0.75rem 0.95rem !important;
+        text-align: left !important;
+      }
+      td {
+        border-bottom: 1px solid var(--border-color) !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        padding: 0.75rem 0.95rem !important;
+        color: var(--text-secondary) !important;
+      }
+      tr:nth-child(even) td {
+        background: rgba(255, 255, 255, 0.015) !important;
+      }
+      tr:hover td {
+        background: var(--ds-teal-subtle) !important;
+      }
+      /* Links & Buttons */
+      a {
+        color: var(--ds-teal-500) !important;
+        text-decoration: none !important;
+        transition: color 0.15s ease !important;
+      }
+      a:hover {
+        color: #ffffff !important;
+      }
+      .btn, button, .action-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.78rem !important;
+        font-family: var(--font-mono) !important;
+        font-weight: 500 !important;
+        color: var(--ds-teal-500) !important;
+        background: transparent !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 4px !important;
+        text-decoration: none !important;
+        cursor: pointer !important;
+        transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease !important;
+      }
+      .btn:hover, button:hover, .action-btn:hover {
+        border-color: var(--ds-teal-500) !important;
+        background: var(--ds-teal-subtle) !important;
+        color: #ffffff !important;
+      }
+      /* Status Badges */
+      .tag, .badge {
+        font-family: var(--font-mono) !important;
+        font-size: 0.72rem !important;
+        border-radius: 4px !important;
+        padding: 0.25rem 0.55rem !important;
+        font-weight: 500 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.35rem !important;
+      }
+      .tag.is-success, .badge-success, .status-up, [class*="success"] {
+        background: rgba(0, 150, 136, 0.15) !important;
+        color: #00bfa5 !important;
+        border: 1px solid rgba(0, 150, 136, 0.4) !important;
+      }
+      .tag.is-danger, .badge-danger, .status-down, [class*="danger"] {
+        background: rgba(248, 81, 73, 0.15) !important;
+        color: #f85149 !important;
+        border: 1px solid rgba(248, 81, 73, 0.4) !important;
+      }
+      .tag.is-warning, .badge-warning, .status-degraded, [class*="warning"] {
+        background: rgba(210, 153, 34, 0.15) !important;
+        color: #d29922 !important;
+        border: 1px solid rgba(210, 153, 34, 0.4) !important;
+      }
+      /* Graphs & Charts */
+      svg text {
+        fill: var(--text-secondary) !important;
+        font-family: var(--font-mono) !important;
+        font-size: 11px !important;
+      }
+      svg line, svg path.domain {
+        stroke: var(--border-color) !important;
+      }
+      svg path.line {
+        stroke: var(--ds-teal-500) !important;
+      }
+      /* Built With Footer */
+      .built-with-tags {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+      }
+      .tag-link {
+        display: inline-block;
+        text-decoration: none;
+        line-height: 0;
+      }
+      .tag-badge {
+        width: 125px;
+        height: auto;
+        border-radius: 4px;
+        display: block;
+      }
+    </style>
+
+  customFootHtml: |
+    <div class="built-with-tags">
+      <a href="https://github.com/roberto-mota20" target="_blank" rel="noopener noreferrer" class="tag-link">
+        <img src="assets/tags/github.svg" alt="GitHub" class="tag-badge" />
+      </a>
+    </div>
