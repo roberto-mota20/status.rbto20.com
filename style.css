@@ -248,6 +248,13 @@ body {
   width: 100%;
 }
 
+#services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
 .section-header {
   display: flex;
   align-items: center;
@@ -267,10 +274,10 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  padding: 1.15rem 1.25rem;
+  padding: 1.35rem 1.45rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 1.15rem;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 
@@ -302,7 +309,7 @@ body {
 .uptime-timeline {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.65rem;
   width: 100%;
 }
 
