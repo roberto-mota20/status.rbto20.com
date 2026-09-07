@@ -1,3 +1,0 @@
-# Primeira Publicação
-
-Hello, World!
