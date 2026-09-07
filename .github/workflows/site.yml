@@ -39,7 +39,7 @@ jobs:
           mkdir -p dist
           cp -r index.html style.css app.js privacidade.html privacidade 404.html dist/
           mkdir -p dist/assets
-          cp -r assets/JetBrainsMono-VariableFont_wght.ttf assets/pfp.jpg dist/assets/ 2>/dev/null || true
+          cp -r assets/JetBrainsMono-VariableFont_wght.ttf assets/pfp.jpg assets/favicon.svg dist/assets/ 2>/dev/null || true
           [ -d "assets/tags" ] && cp -r assets/tags dist/assets/ || true
           [ -d "graphs" ] && cp -r graphs dist/ || true
           [ -d "history" ] && cp -r history dist/ || true
