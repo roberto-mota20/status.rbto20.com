@@ -235,10 +235,3 @@ status-website:
         display: block;
       }
     </style>
-
-  customFootHtml: |
-    <div class="built-with-tags">
-      <a href="https://github.com/roberto-mota20" target="_blank" rel="noopener noreferrer" class="tag-link">
-        <img src="assets/tags/github.svg" alt="GitHub" class="tag-badge" />
-      </a>
-    </div>

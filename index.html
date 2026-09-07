@@ -6,31 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="robots" content="noindex, nofollow" />
 
-  <title>Roberto Mota | Status</title>
+  <title>Status</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/pfp.jpg" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2.0.0" />
+  <link rel="stylesheet" href="style.css?v=2.1.0" />
 </head>
 
 <body>
   <div class="site-wrapper status-wrapper">
     <main class="status-frame" role="main">
 
-      <!-- Navigation Bar -->
-      <nav class="top-nav" aria-label="Navegação Principal">
-        <a href="/" class="nav-brand">
-          <img src="assets/pfp.jpg" alt="Roberto Mota" class="nav-brand-pfp" />
-          <span>Roberto Mota | Status</span>
+      <!-- Navigation Header -->
+      <header class="top-nav" aria-label="Cabeçalho Principal">
+        <h1 class="nav-title">Status</h1>
+        <a href="https://rbto20.com" class="action-btn" id="btn-main-site" aria-label="Acessar página principal">
+          <span>Principal ↗</span>
         </a>
-        <div class="nav-links">
-          <a href="/" class="nav-item active">Status</a>
-          <a href="https://rbto20.com" target="_blank" rel="noopener noreferrer" class="nav-item">Principal ↗</a>
-          <a href="https://github.com/roberto-mota20" target="_blank" rel="noopener noreferrer" class="nav-item">GitHub ↗</a>
-        </div>
-      </nav>
+      </header>
 
       <!-- Global Status Banner -->
       <section class="status-hero" id="global-status-hero" aria-label="Status Geral">
@@ -41,7 +36,7 @@
         <span class="status-hero-time" id="last-updated-text">Atualizado há poucos segundos</span>
       </section>
 
-      <!-- Services List (GitHub Status Style with 90-Day Timeline Bars) -->
+      <!-- Services List (90-Day Timeline with Real Data) -->
       <section class="services-section" aria-label="Serviços Monitorados">
         <div class="section-header">
           <h2 class="section-title">Serviços</h2>
@@ -51,51 +46,32 @@
         </div>
       </section>
 
-      <!-- Latency & Response Time Graph -->
+      <!-- Response Time Metrics Section -->
       <section class="metrics-card" aria-label="Métricas de Tempo de Resposta">
         <div class="metrics-header">
-          <h2 class="metrics-title">Tempo de Resposta do Sistema</h2>
-          <div class="latency-tabs" role="tablist">
-            <button class="latency-tab active" data-period="24h" role="tab" aria-selected="true">24h</button>
-            <button class="latency-tab" data-period="7d" role="tab" aria-selected="false">7d</button>
-            <button class="latency-tab" data-period="30d" role="tab" aria-selected="false">30d</button>
-            <button class="latency-tab" data-period="90d" role="tab" aria-selected="false">90d</button>
-          </div>
+          <h2 class="metrics-title">Tempo de Resposta</h2>
         </div>
 
-        <div class="chart-container">
-          <svg class="chart-svg" id="latency-chart-svg" viewBox="0 0 600 150" preserveAspectRatio="none">
-            <!-- Dynamic SVG path rendered by app.js -->
-          </svg>
-        </div>
-
-        <div class="chart-summary-bar">
-          <span>Média: <strong class="chart-stat-value" id="avg-latency-val">-- ms</strong></span>
-          <span>Mín: <strong class="chart-stat-value" id="min-latency-val">-- ms</strong></span>
-          <span>Máx: <strong class="chart-stat-value" id="max-latency-val">-- ms</strong></span>
-        </div>
-      </section>
-
-      <!-- Incident History Section -->
-      <section class="incidents-card" aria-label="Histórico de Incidentes">
-        <h2 class="metrics-title">Histórico de Incidentes Recentes</h2>
-        <div id="incidents-list">
+        <div class="metrics-grid" id="metrics-summary-grid">
           <!-- Rendered dynamically by app.js -->
         </div>
+
+        <p class="metrics-notice">Métricas reais registradas por testes periódicos de conectividade.</p>
       </section>
 
-      <!-- Built with Tag -->
-      <footer class="built-with-tags">
-        <a href="https://github.com/roberto-mota20" target="_blank" rel="noopener noreferrer" class="tag-link" aria-label="Built with GitHub">
-          <img src="assets/tags/github.svg" alt="GitHub" class="tag-badge" />
-        </a>
-      </footer>
+      <!-- Incident History Section (Shown only if incidents exist) -->
+      <section class="incidents-card" id="incidents-section" aria-label="Histórico de Incidentes">
+        <h2 class="metrics-title">Histórico de Incidentes</h2>
+        <div id="incidents-list">
+          <!-- Rendered dynamically if incidents exist -->
+        </div>
+      </section>
 
     </main>
 
     <!-- Corner Privacy Link -->
     <div class="corner-privacy">
-      <a href="privacidade.html" class="privacy-link" id="link-privacy">
+      <a href="./privacidade" class="privacy-link" id="link-privacy">
         privacidade
       </a>
     </div>
@@ -106,7 +82,7 @@
   <div class="custom-tooltip" id="app-tooltip" role="tooltip"></div>
 
   <!-- Application Script -->
-  <script src="app.js?v=2.0.0"></script>
+  <script src="app.js?v=2.1.0"></script>
 </body>
 
 </html>
