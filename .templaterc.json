@@ -1,3 +1,11 @@
 {
-  "files": [".github/**/*"]
+  "files": [
+    ".github/workflows/graphs.yml",
+    ".github/workflows/response-time.yml",
+    ".github/workflows/setup.yml",
+    ".github/workflows/summary.yml",
+    ".github/workflows/update-template.yml",
+    ".github/workflows/updates.yml",
+    ".github/workflows/uptime.yml"
+  ]
 }
